@@ -5,23 +5,24 @@ class RecommendationsController < ApplicationController
   def new
     @recommendation = Recommendation.new
   end
-
+ 
   def show
   end
-
+  # Set up a controller action for this rec form, so that an rec can be created and assigned to a sender, a receiver and a product url correctly. 
+ 
   def create
-    # @service = Service.find(params[:service_id])
-    @enquiry = @service.enquiries.new(enquiry_params)
-    @recommendation.sender_id = current_user.id
-    # @recommendation.receiver_id = @service.user.id
-
-    if @recommendation.save
-      flash[:success] = "Your recommendation was made successfully."
-      redirect_to root_path
-    else
-      flash[:danger] = "Your enquiry was not sent."
-      redirect_to root_path
-    end
+      @recommendation = Recommendation.new(recommendation_params)
+      @recommendation.sender_id = current_user.id
+      @recommendation.receiver_id = Recommendation.find(params[:receiver_id])
+      
+      if @recommendation.save
+          flash[:success] = "Your rec was made successfully"
+          redirect_to root_path
+      else
+          flash[:danger] = "Your rec was not sent"
+          redirect_to root_path
+      end
+  end
 
   def edit
   end
@@ -30,5 +31,16 @@ class RecommendationsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def inbox
+  end
+
+  def outbox
+  end
+
+  private
+  def recommendation_params
+      params.require(:recommendation).permit(:message, :product_url, :receiver_id)
   end
 end

@@ -16,6 +16,7 @@
       <% if current_user %>
          <li><%= link_to "User", user_path(current_user.id) %></li>
          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+         <li><%= link_to "Recommend", new_recommendation_path %></li>
          <% else %>
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <li><%= link_to "Register", new_user_registration_path %></li> 
@@ -24,8 +25,7 @@
     </ul>
   </nav>
 </header>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<% flash.each do |name, message| %>   <div class="flash-message flash-message-<%= name %>">     <%= message %>   </div> <% end %>
   <%= yield %>
 
 </body>

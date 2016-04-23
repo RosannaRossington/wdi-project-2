@@ -1,2 +1,27 @@
 <h1>Recommendations#new</h1>
 <p>Find me in app/views/recommendations/new.html.erb</p>
+<h1>New Recommendation</h1>
+
+<%= form_for [@recommendation] do |f| %>
+  <% if @recommendation.errors.any? %>
+    <% for message in @recommendation.errors.full_messages %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <fieldset class="form-group">
+    <%= f.label :message %>
+    <%= f.text_area :message, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :product_url %>
+    <%= f.text_field :product_url, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :receiver_id %>
+    <%= f.text_field :receiver_id, class: "form-control" %>
+  </fieldset>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
