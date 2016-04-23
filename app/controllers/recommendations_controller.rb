@@ -13,7 +13,7 @@ class RecommendationsController < ApplicationController
   def create
       @recommendation = Recommendation.new(recommendation_params)
       @recommendation.sender_id = current_user.id
-      @recommendation.receiver_id = Recommendation.find(params[:receiver_id])
+      # @recommendation.receiver_id = Recommendation.find(params[:receiver_id])
       
       if @recommendation.save
           flash[:success] = "Your rec was made successfully"
