@@ -1,2 +1,9 @@
 <h1>Recommendations#show</h1>
-<p><img src= " https://lh4.googleusercontent.com/-38_jdnYf0Yg/AAAAAAAAAAI/AAAAAAAAGXc/YuPxRz3lHOs/s0-c-k-no-ns/photo.jpg"></p>
+<!-- <p><%= image_tag ("/public/products/output.png") %></p> -->
+<p> <img src = "/public/products/output.png"> </p>
+<p>Message <%= @recommendation.message %> </p>
+<p>From <%= @recommendation.sender_id %> </p>
+<p>Rec number <%= @recommendation.id %> </p>
+<a href="#">Respond</a>
+<a href="#">Shop</a>
+<a href="#">Save for later</a>
