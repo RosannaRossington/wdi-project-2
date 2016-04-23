@@ -15,3 +15,7 @@ u2 = User.create!(email: "jessie@jessie.com",
                   image: "https://s-media-cache-ak0.pinimg.com/236x/e1/20/bd/e120bdd19abb5f5e51ffca8ff7e1b94f.jpg", 
                   )
 
+r1 = Recommendation.create!(message: "Hey, I saw this and thought of you! What do you think?"
+                         product_url: "http://www.asos.com/Self-Portrait/Self-Portrait-Lace-Trimmed-Mini-Dress-with-Strap-Back-Detail/Prod/pgeproduct.aspx?iid=6339345&CTARef=Recently%20Viewed&WT.ac=rec_viewed&CTAref=Recently+Viewed"
+                         sender_id: u1.id,
+                         receiver_id: u2.id)
