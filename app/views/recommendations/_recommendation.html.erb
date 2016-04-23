@@ -1,6 +1,8 @@
 <div>
-  <p ><%= recommendation.message %></p>
-  <p ><%= recommendation.product_url %></p>
+  <p><%= recommendation.message %></p>
+  <p><%= recommendation.product_url %></p>
+  <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
+
   <div>
      <% if current_page?(action: "outbox")%>
         <a href="#">Delete</a>
