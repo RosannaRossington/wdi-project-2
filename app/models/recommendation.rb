@@ -1,7 +1,7 @@
 class Recommendation < ActiveRecord::Base
   belongs_to :user
 
-  before_validation :add_default_status
+  # before_validation :add_default_status
 
   validates :message, presence: true
   validates :product_url, presence: true
@@ -12,17 +12,17 @@ class Recommendation < ActiveRecord::Base
 # Rcommendation model uses the method to save the url and create a screengrab using gastly
 # gastly downloads/saves in file and to product_url variable
 
-  before_save :get_product_url
+  # before_save :get_product_url
 
-  private
-    def add_default_status
-        self.status = "pending" if self.status.nil?
-    end
+  # private
+  #   def add_default_status
+  #       self.status = "pending" if self.status.nil?
+  #   end
 
-  private
-    def get_product_url
-      self.product_url = Gastly.capture(self.url, 'public/<current_user.product_url>.png')
-    end
+  # private
+  #   def get_product_url
+  #     self.product_url = Gastly.capture(self.url, 'public/<current_user.product_url>.png')
+  #   end
 
 
 end
