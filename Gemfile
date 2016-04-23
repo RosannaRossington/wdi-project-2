@@ -46,4 +46,5 @@ group :development do
 end
 
 gem 'foundation-rails', '5.5.1.2'
+gem 'gastly'
 

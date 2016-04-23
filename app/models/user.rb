@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :recommendations
+  has_many :recommendations_as_sender, foreign_key: "sender_id", class_name:"Recommendation"
+  has_many :recommendations_as_receiver, foreign_key: "receiver_id", class_name:"Recommendation"
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

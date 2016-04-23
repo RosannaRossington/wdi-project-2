@@ -15,4 +15,3 @@ u2 = User.create!(email: "jessie@jessie.com",
                   image: "https://s-media-cache-ak0.pinimg.com/236x/e1/20/bd/e120bdd19abb5f5e51ffca8ff7e1b94f.jpg", 
                   )
 
-r1 = Recommendation.create!
