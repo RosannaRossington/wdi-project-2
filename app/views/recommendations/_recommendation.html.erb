@@ -1,13 +1,13 @@
-<div class="card card-block row">
-  <p class="card-text"><%= recommendation.message %></p>
-  <p class="card-text"><%= recommendation.product_url %></p>
-  <div class="actions pull-xs-right">
+<div>
+  <p ><%= recommendation.message %></p>
+  <p ><%= recommendation.product_url %></p>
+  <div>
      <% if current_page?(action: "outbox")%>
-        <a href="#" class="btn btn-secondary">Cancel</a>
+        <a href="#">Delete</a>
     <% else %>
-        <a href="#" class="btn btn-danger">Respond</a>
-        <a href="#" class="btn btn-success">Shop</a>
-        <a href="#" class="btn btn-success">Save for later</a>
+        <a href="#">Respond</a>
+        <a href="#">Shop</a>
+        <a href="#">Save for later</a>
     <% end %>
   </div>
 </div>
