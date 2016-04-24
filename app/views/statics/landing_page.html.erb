@@ -3,3 +3,43 @@
 <h1 class="text-center"> BRAND NAME</h1>
 </div>
 </div>
+<a href="#" data-reveal-id="myModal" class="button">Launch Signup Modal</a>
+
+<div id="myModal" class="reveal-modal remove-whitespace" data-reveal>
+<div class="row">
+    <div class="large-6 columns auth-plain">
+      <div class="signup-panel left-solid">
+        <p class="welcome">Registered Users</p>
+        <form>
+          <div class="row collapse">
+            <div class="small-2  columns">
+              <span class="prefix"><i class="fi-torso-female"></i></span>
+            </div>
+            <div class="small-10  columns">
+              <input type="text" placeholder="username">
+            </div>
+          </div>
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-lock"></i></span>
+            </div>
+            <div class="small-10 columns ">
+              <input type="text" placeholder="password">
+            </div>
+          </div>
+        </form>
+        <%= link_to "Sign In", new_user_session_path %>
+      </div>
+    </div>
+
+    <div class="large-6 columns auth-plain">
+      <div class="signup-panel newusers">
+        <p class="welcome"> New User?</p>
+        <p>By creating an account you will be able to share links and recommendations with friends.</p><br>
+        <%= link_to "Register", new_user_registration_path %></br>
+      </div>
+    </div>
+
+   </div>   
+  <a class="close-reveal-modal">&#215;</a>
+</div>   
