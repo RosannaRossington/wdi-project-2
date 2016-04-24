@@ -1,41 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>WdiProject2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<header>
-  <nav>
-    <ul>
-      <div class='login'>
-      <% if current_user %>
-      <li><%= link_to "XOXO", root_path %></li> 
-      <li><%= link_to "Users", users_path %></li> 
-         <li><%= link_to "User", user_path(current_user.id) %></li>
-         <li><%= link_to "Inbox", inbox_path %></li>
-         <li><%= link_to "Outbox", outbox_path %></li>
-         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-         <li><%= link_to "Recommend", new_recommendation_path %></li>
-         <% else %>
-         <li><%= link_to "XOXO", root_path %></li> 
-         <li><%= link_to "Users", users_path %></li> 
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-        <li><%= link_to "Register", new_user_registration_path %></li> 
-        <% end %>
-        </div>
-    </ul>
-  </nav>
-</header>
-<% flash.each do |name, message| %>   
-  <div class="flash-message flash-message-<%= name %>">     
-  <%= message %>   
-  </div> 
-<% end %>
-  <%= yield %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-</body>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= render "header" %>
+    <%= render "flash_message" %>
+    <%= yield %>
+
+  </body>
 </html>
-
