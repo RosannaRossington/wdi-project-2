@@ -1,6 +1,22 @@
-<li>
-    <ul>
-        <li><%= user.username %></li>
-        <li><%= user.email %></li>
-    </ul>
-</li>
+
+<!-- this adds Foundation Icon Fonts!! -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    
+    <div class="row">
+      <div class="medium-4 columns">
+        <div class="profile-card">
+          <img src="<%= user.image %>" alt="UserImage">
+          <div class="profile-info">
+            <h4 class="subheader"><%= user.first_name %></h4>
+            <h4 class="subheader"><%= user.last_name %></h4>
+            <p><%= user.email %></p>
+            <p><strong>Username: </strong><%= user.username %></p>
+           <!--  <p><a href="http://foundation.zurb.com/forum">Forum</a> | <a href="http://zurb.com/ink/">Website</a></p> -->
+            <ul class="inline-list">
+              <li><a href="https://www.facebook.com/"><i class="fi-social-facebook"></i></a></li>
+              <li><a href="https://twitter.com/"><i class="fi-social-twitter"></i></a></li>
+              <li><a href="https://instagram.com/"><i class="fi-social-instagram"></i></a></li>
+          </div>
+        </div>
+      </div>
+    </div>
