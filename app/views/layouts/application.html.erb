@@ -14,17 +14,12 @@
   </head>
 
   <body>
+    <% if current_page?(root_path) %>
+    <% else %>
+        <%= render "header" %>
+    <% end %>
 
- 
-<!--   <% if current_page?(root_path) %>
-      <%= render "header_home"   %>
-  <% else %>
-      <%= render "header" %>
-  <% end %> -->
-
-  <%= render "header" %>
     <%= render "flash_message" %>
     <%= yield %>
-
   </body>
 </html>
