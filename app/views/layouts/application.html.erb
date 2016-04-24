@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <link href='https://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,7 +14,14 @@
   </head>
 
   <body>
-    <%= render "header" %>
+
+ 
+  <% if current_page?(root_path) %>
+      <%= render "header_home"   %>
+  <% else %>
+      <%= render "header" %>
+  <% end %>
+
     <%= render "flash_message" %>
     <%= yield %>
 

@@ -1,13 +1,16 @@
 <header>
-  <nav>
+  <nav >
     <ul>
     <li><%= link_to "XOXO", root_path %></li> 
     <li><%= link_to "Users", users_path %></li> 
       <div class='login'>
       <% if current_user %>
          <li><%= link_to "User", user_path(current_user.id) %></li>
+
          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
          <li><%= link_to "Recommend", new_recommendation_path %></li>
+         <li><%= link_to "Inbox", inbox_path %></li>
+         <li><%= link_to "Outbox", outbox_path %></li>
          <% else %>
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <li><%= link_to "Register", new_user_registration_path %></li> 
@@ -16,3 +19,4 @@
     </ul>
   </nav>
 </header>
+

@@ -22,8 +22,7 @@ class Recommendation < ActiveRecord::Base
 
   private
     def get_product_url
-
-      self.product_url = Gastly.capture(self.product_url, 'public/output.png')
+      self.product_url = Gastly.capture(self.product_url,'public/output.png')
     end
 
 
