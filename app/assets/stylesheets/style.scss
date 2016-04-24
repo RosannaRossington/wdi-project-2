@@ -1,4 +1,12 @@
 @import "variables";
+   
+#welcome {
+
+  background-color: none;
+  h1 {
+    font-family:$home-font-family;
+  }
+}
 
 nav {
   background-color: $nav-background-color;
@@ -34,7 +42,4 @@ body {
 
 
 
-#welcome {
-  background-color: black;
-  font-family:$home-font-family;
-}
+

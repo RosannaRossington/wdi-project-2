@@ -1,27 +1,37 @@
-<h1>New Recommendation</h1>
+<div class="row">
+  <div class="small-8 medium-6 large-5 small-centered columns">
 
-<%= form_for [@recommendation] do |f| %>
-  <% if @recommendation.errors.any? %>
-    <% for message in @recommendation.errors.full_messages %>
-      <div class="alert alert-danger" role="alert">
-        <%= message %>
+    <div class="header panel">
+      <div class="sign">
+        <h1>New Recommendation</h1>
       </div>
-    <% end %>
-  <% end %>
+      <p><span></span> 
+      <%= form_for [@recommendation] do |f| %>
+        <% if @recommendation.errors.any? %>
+          <% for message in @recommendation.errors.full_messages %>
+            <div class="alert alert-danger" role="alert">
+              <%= message %>
+            </div>
+          <% end %>
+        <% end %>
 
-  <fieldset class="form-group">
-    <%= f.label :message %>
-    <%= f.text_area :message, class: "form-control" %>
-  </fieldset>
-  <fieldset class="form-group">
-    <%= f.label :product_url %>
-    <%= f.text_field :product_url, class: "form-control" %>
-  </fieldset>
-  <fieldset class="form-group">
-    <%= f.label :receiver_username %>
-    <%= f.text_field :receiver_username, class: "form-control" %>
-  </fieldset>
-  <%= f.submit class: "btn btn-primary button secondary"%>
-<% end %>
-
+        <fieldset class="form-group">
+          <%= f.label :message %>
+          <%= f.text_area :message, class: "form-control" %>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= f.label :product_url %>
+          <%= f.text_field :product_url, class: "form-control" %>
+        </fieldset>
+        <fieldset class="form-group">
+          <%= f.label :receiver_username %>
+          <%= f.text_field :receiver_username, class: "form-control" %>
+        </fieldset>
+        <%= f.submit class: "btn btn-primary button secondary"%>
+      <% end %>
+      </p>
+    </div>
+  
+  </div>
+</div>
 

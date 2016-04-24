@@ -1,0 +1,56 @@
+@import "variables";
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.hero {
+  background: url('https://c2.staticflickr.com/6/5248/5224903562_1e56d100f8_b.jpg') no-repeat center center;
+  background-size: cover;
+  height: 50vh;
+  overflow: hidden;
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-family:$home-font-family;
+    @include vertical-align;
+  }
+}
+
+.footer {
+  background-color: #292c2f;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+  p {
+    &.slogan {
+      color: #8d9093;
+      font-size: 1.8rem;
+      margin: 0 0 1rem;
+    }
+    &.copywrite {
+      color: #8f9296;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+  .links a {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    &::after {
+      content: "•";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+}
