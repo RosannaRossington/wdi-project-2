@@ -15,7 +15,7 @@ class RecommendationsController < ApplicationController
 
       @recommendation = Recommendation.new(recommendation_params)
       @recommendation.sender_id = current_user.id
-      # @recommendation.receiver_username = User.find_by_username(params[:receiver_username])
+      @recommendation.receiver_id = User.find_by_username(params[:receiver_username]).id
 
       if @recommendation.save
           flash[:success] = "Your rec was made successfully"
