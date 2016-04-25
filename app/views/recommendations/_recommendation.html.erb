@@ -1,16 +1,22 @@
-<div>
-<p><%= recommendation.message %></p>
-<p><%= recommendation.product_url %></p>
-<p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
 
   <div>
      <% if current_page?(action: "outbox")%>
         <a href="#">Delete</a>
     <% else %>
-    <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
+  <!--   <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
       <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>
-    </a>
-
+    </a> -->
+    
+        <div class="medium-4 columns">
+          <div class="item-wrapper">
+            <div class="img-wrapper">
+              <a href="<%= recommendation.product_url %>"><img src="/products/output.png"></a>
+            <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
+            <p>From: <%= recommendation.sender_id %></p>
+          </div>  
+        </div>
+      </div>
     <% end %>
   </div>
-</div>
+
+

@@ -2,5 +2,10 @@
  <%= image_tag image_path("/products/output-#{@recommendation.id}.png") %>  
 <p>Message <%= @recommendation.message %> </p>
 <p>From <%= @recommendation.sender_id %> </p>
-<p>Rec number <%= @recommendation.id %> </p>
+
+<h1><%=link_to "Shop", @recommendation.product_url, target: '_blank'%></h1>
+  
+   
+
+
 
