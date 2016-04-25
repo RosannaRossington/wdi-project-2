@@ -1,5 +1,6 @@
 class Recommendation < ActiveRecord::Base
   belongs_to :user
+  has_many :comments 
 
   validates :message, presence: true
   validates :product_url, presence: true

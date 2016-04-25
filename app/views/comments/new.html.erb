@@ -1,0 +1,23 @@
+<h1>Comment</h1>
+
+
+<h3>This rec was from: <%= @recommendation.sender_id %></h3>
+<h3>This rec is for: <%= @recommendation.receiver_id %></h3>
+
+
+<%= form_for [@recommendation, @comment] do |f| %>
+  <% if @comment.errors.any? %>
+    <% for message in @comment.errors.full_messages %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <fieldset class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_area :comment, class: "form-control" %>
+  </fieldset>
+  
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

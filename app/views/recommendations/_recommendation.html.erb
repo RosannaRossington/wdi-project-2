@@ -12,6 +12,9 @@
             <div class="img-wrapper">
               <a href="<%= recommendation.product_url %>"><img src=("/products/output-#{@recommendation.id}.png")></a>
             <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
+
+            <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+
             <p>From: <%= recommendation.sender_id %></p>
           </div>  
         </div>

@@ -24,5 +24,4 @@ r1 = Recommendation.create!(message: "Hey, I saw this and thought of you! What d
 
 c1 = Comment.create!(recommendation_id: r1.id,
                          comment: "Thanks! I love it.",
-                         sender_id: u2.id,
-                         receiver_id: u1.id)
+                         user_id: u2.id)

@@ -8,6 +8,7 @@ class RecommendationsController < ApplicationController
  
   def show
     @recommendation = Recommendation.find(params[:id])
+    @sender = User.find(@recommendation.sender_id)
   end
   # Set up a controller action for this rec form, so that an rec can be created and assigned to a sender, a receiver and a product url correctly. 
  
