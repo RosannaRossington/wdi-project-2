@@ -1,6 +1,7 @@
 
   <div>
      <% if current_page?(action: "outbox")%>
+     <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
         <a href="#">Delete</a>
     <% else %>
   <!--   <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
@@ -10,7 +11,7 @@
         <div class="medium-4 columns">
           <div class="item-wrapper">
             <div class="img-wrapper">
-              <a href="<%= recommendation.product_url %>"><img src="/products/output.png"></a>
+              <a href="<%= recommendation.product_url %>"><img src=("/products/output-#{@recommendation.id}.png")></a>
             <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
             <p>From: <%= recommendation.sender_id %></p>
           </div>  
@@ -19,4 +20,4 @@
     <% end %>
   </div>
 
-
+  
