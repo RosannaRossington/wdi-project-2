@@ -19,10 +19,10 @@ class RecommendationsController < ApplicationController
 
       if @recommendation.save
           flash[:success] = "Your rec was made successfully"
-          redirect_to root_path
+          redirect_to home_path
       else
           flash[:danger] = "Your rec was not sent"
-          redirect_to root_path
+          redirect_to home_path
       end
   end
 

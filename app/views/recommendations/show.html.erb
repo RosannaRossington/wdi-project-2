@@ -1,6 +1,5 @@
 <h1>Recommendations#show</h1>
-<!-- <p><%= image_tag ("/public/output.png") %></p> -->
- <%= image_tag image_path("/public/output.png") %>  
+ <%= image_tag image_path("/products/output-#{@recommendation.id}.png") %>  
 <p>Message <%= @recommendation.message %> </p>
 <p>From <%= @recommendation.sender_id %> </p>
 <p>Rec number <%= @recommendation.id %> </p>
