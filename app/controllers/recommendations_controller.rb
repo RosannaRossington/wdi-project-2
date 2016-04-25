@@ -12,10 +12,11 @@ class RecommendationsController < ApplicationController
   # Set up a controller action for this rec form, so that an rec can be created and assigned to a sender, a receiver and a product url correctly. 
  
   def create
+
       @recommendation = Recommendation.new(recommendation_params)
       @recommendation.sender_id = current_user.id
-      @recommendation.receiver_username = User.new(params[:username])
-      
+      # @recommendation.receiver_username = User.find_by_username(params[:receiver_username])
+
       if @recommendation.save
           flash[:success] = "Your rec was made successfully"
           redirect_to root_path
@@ -42,6 +43,6 @@ class RecommendationsController < ApplicationController
 
   private
   def recommendation_params
-      params.require(:recommendation).permit(:message, :product_url, :receiver_id)
+      params.require(:recommendation).permit(:message, :product_url, :receiver_username)
   end
 end

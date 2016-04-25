@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424153613) do
+ActiveRecord::Schema.define(version: 20160425103841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,11 @@ ActiveRecord::Schema.define(version: 20160424153613) do
   create_table "recommendations", force: :cascade do |t|
     t.text     "message"
     t.text     "product_url"
-    t.integer  "user_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "sender_id"
-    t.string   "receiver_username"
+    t.integer  "receiver_id"
   end
-
-  add_index "recommendations", ["user_id"], name: "index_recommendations_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -50,5 +47,4 @@ ActiveRecord::Schema.define(version: 20160424153613) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "recommendations", "users"
 end
