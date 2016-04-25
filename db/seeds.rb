@@ -21,3 +21,8 @@ r1 = Recommendation.create!(message: "Hey, I saw this and thought of you! What d
                          product_url: "http://www.asos.com/Self-Portrait/Self-Portrait-Lace-Trimmed-Mini-Dress-with-Strap-Back-Detail/Prod/pgeproduct.aspx?iid=6339345&CTARef=Recently%20Viewed&WT.ac=rec_viewed&CTAref=Recently+Viewed",
                          sender_id: u1.id,
                          receiver_id: u2.id)
+
+c1 = Comment.create!(recommendation_id: r1.id,
+                         comment: "Thanks! I love it.",
+                         sender_id: u2.id,
+                         receiver_id: u1.id)

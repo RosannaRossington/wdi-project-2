@@ -36,7 +36,6 @@ class RecommendationsController < ApplicationController
   end
 
   def inbox
-  #     @recommendation.sender_id = User.find_by_id(params[:sender_id]).username
   end
 
   def outbox

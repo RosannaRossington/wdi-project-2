@@ -47,4 +47,4 @@ end
 
 gem 'foundation-rails', '5.5.1.2'
 gem 'gastly'
-
+gem 'carrierwave', '~> 0.10.0'
