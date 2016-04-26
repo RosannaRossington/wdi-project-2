@@ -1,32 +1,30 @@
 
 <div>
   <% if current_page?(action: "outbox")%>
-  <div class="medium-4 columns">
-    <div class="item-wrapper">
-      <div class="img-wrapper">
-   
-      <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
-      </div>
-       
-    <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
-    <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+    <div class="medium-4 columns">
+      <div class="item-wrapper">
+        <div class="img-wrapper">
+          <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
+          </div>     
+          <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
+          <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+        </div>
+      </div> 
     </div>
-    </div> 
   
   <% else %>
       <div class="medium-4 columns">
         <div class="item-wrapper">
           <div class="img-wrapper">
-       
-          <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
+            <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
+            </div>
+            <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
+            <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
           </div>
-           
-        <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
-        <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
-        </div>
         </div> 
-    </div>
+      </div>
   <% end %>
 </div>
+
 
   
