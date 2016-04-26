@@ -39,7 +39,6 @@ class RecommendationsController < ApplicationController
   end
 
   def inbox
-    @recommendation = Recommendation.new(params[:id])
   end
 
   def outbox

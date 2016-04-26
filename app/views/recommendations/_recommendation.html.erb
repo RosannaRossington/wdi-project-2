@@ -18,10 +18,11 @@
               <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>
             </a> -->
 
-          </div>  
-          <button><%= link_to "Recommendation",recommendation_path(recommendation.id) %></button>
-          <button><%= link_to "Comment", new_recommendation_comment_path(recommendation) %></button>
-        </div>
+             
+          <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
+          <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+          </div>
+          </div> 
       </div>
 
 

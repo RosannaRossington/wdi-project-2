@@ -25,7 +25,7 @@ var color = colors[Math.floor(Math.random()*colors.length)]
     $(this).css("background-color",color);
     $(this).find("h2").removeClass('hidden')
   }, function(){ 
-    $(this).css("background-color", "white")
+    $(this).css("background-color", "initial")
     $(this).find("h2").addClass('hidden')
   });
 });
