@@ -12,6 +12,5 @@ class Recommendation < ActiveRecord::Base
       self.id = Time.now.to_i
       screengrab = Gastly.capture(self.product_url,"public/products/output-#{self.id}.png")
     end
-
-
+    
 end

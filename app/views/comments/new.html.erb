@@ -19,5 +19,10 @@
     <%= f.text_area :comment, class: "form-control" %>
   </fieldset>
   
+  <div class="field">
+    <%= f.label :style_image %><br />
+    <%= f.file_field :style_image %>
+  </div>
+
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

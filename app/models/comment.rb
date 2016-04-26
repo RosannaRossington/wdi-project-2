@@ -4,5 +4,7 @@ class Comment < ActiveRecord::Base
 
   validates :comment, presence: true
   validates :recommendation_id, presence: true
+
+  mount_uploader :style_image, StyleImageUploader
   
 end
