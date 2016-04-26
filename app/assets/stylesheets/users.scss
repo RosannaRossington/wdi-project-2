@@ -86,7 +86,6 @@
 
 #users :hover {
   .profile-info {
-    // opacity: 0;
     h2 {
       color:red;
     }
@@ -98,7 +97,8 @@
   opacity:0;
   } 
 
-  background-color: black;
+  // background-color: black;
 }
 
+.hidden { visibility:hidden; }
 
