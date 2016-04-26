@@ -8,6 +8,26 @@
 <% end %>
 
 <h1><%=link_to "Shop", @recommendation.product_url, target: '_blank'%></h1>
+
+
+
+
+<%= form_for [@recommendation, @comment] do |f| %>
+  <% if @comment.errors.any? %>
+    <% for message in @comment.errors.full_messages %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <fieldset class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_area :comment, class: "form-control" %>
+  </fieldset>
+  
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
   
    
 
