@@ -5,7 +5,7 @@
     
       <div class="medium-4 columns">
         <div class="profile-card">
-        <% if user.image %>
+        <% if user.image? %>
         <img id="user_image" class="media-object" src="<%= user.image %>" alt="<%= user.username %>">
         <% else %>
         <img id="user_image" class="media-object" src="/images/default.jpg" alt="<%= user.username %>">
