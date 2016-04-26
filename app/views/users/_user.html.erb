@@ -5,7 +5,11 @@
     
       <div class="medium-4 columns">
         <div class="profile-card">
-          <img src="<%= user.image %>" alt="UserImage">
+        <% if user.image %>
+        <img id="user_image" class="media-object" src="<%= user.image %>" alt="<%= user.username %>">
+        <% else %>
+        <img id="user_image" class="media-object" src="/images/default.jpg" alt="<%= user.username %>">
+        <% end %>
           <div class="profile-info">
             <h4 class="subheader"><%= user.first_name %></h4>
             <h4 class="subheader"><%= user.last_name %></h4>
