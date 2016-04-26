@@ -15,5 +15,7 @@ class User < ActiveRecord::Base
   # validates :first_name, length: { in: 3..50 }
   # validates :last_name, length: { in: 3..50 }
 
+  
+  mount_uploader :profile_image, ProfileImageUploader
  
 end
