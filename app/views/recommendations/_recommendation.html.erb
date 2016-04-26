@@ -1,34 +1,32 @@
 
-  <div>
-     <% if current_page?(action: "outbox")%>
-     <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
-     <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
-    <% else %>
-
-  <!--   <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
-      <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>
-    </a> -->
-    
-        <div class="medium-4 columns">
-          <div class="item-wrapper">
-            <div class="img-wrapper">
-         
-            <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
-            
-            </div>
-           <!--  <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
-              <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>
-            </a> -->
-
-             
-          <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
-          <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
-          </div>
-          </div> 
+<div>
+  <% if current_page?(action: "outbox")%>
+  <div class="medium-4 columns">
+    <div class="item-wrapper">
+      <div class="img-wrapper">
+   
+      <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
       </div>
-
-
-    <% end %>
-  </div>
+       
+    <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
+    <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+    </div>
+    </div> 
+  
+  <% else %>
+      <div class="medium-4 columns">
+        <div class="item-wrapper">
+          <div class="img-wrapper">
+       
+          <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
+          </div>
+           
+        <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
+        <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+        </div>
+        </div> 
+    </div>
+  <% end %>
+</div>
 
   
