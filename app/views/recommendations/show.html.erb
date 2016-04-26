@@ -4,7 +4,7 @@
 <p>Recommendation from <%= @sender.username %> </p>
 
 <% @recommendation.comments.each do |comment| %>
-  <p>Comment from: <%= comment.user_id %></p>
+  <p>Comment from: <%= comment.user.username %></p>
   <p><%= comment.comment %></p>
   <p><%= image_tag comment.style_image.url %></p>
 <% end %>

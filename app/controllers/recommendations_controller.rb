@@ -9,7 +9,9 @@ class RecommendationsController < ApplicationController
   def show
     @recommendation = Recommendation.find(params[:id])
     @sender = User.find(@recommendation.sender_id)
+
     # change comment user_id to User username
+    # @comment = Comment.find(params[:id])
     # @commenter = User.find(@comment.user_id)
     
   end
@@ -49,5 +51,10 @@ class RecommendationsController < ApplicationController
   private
   def recommendation_params
       params.require(:recommendation).permit(:message, :product_url, :receiver_username)
+  end
+
+  private
+  def comment_params
+      params.require(:comment).permit(:comment, :recommendation_id, :user_id, :style_image )
   end
 end
