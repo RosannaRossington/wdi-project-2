@@ -2,8 +2,9 @@
 <!-- this adds Foundation Icon Fonts!! -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     
-    
-      <div class="medium-4 columns">
+
+    <div class="medium-4 columns">
+      <div id="users">
         <div class="profile-card">
         <% if user.image? %>
         <img id="user_image" class="media-object" src="<%= user.image %>" alt="<%= user.username %>">
@@ -14,7 +15,7 @@
             <h4 class="subheader"><%= user.first_name %></h4>
             <h4 class="subheader"><%= user.last_name %></h4>
             <p><%= user.email %></p>
-            <p><%= user.username %></p>
+            <h2><%= user.username %></h2>
             
             <p>
                <b>Image:</b>
@@ -25,7 +26,10 @@
               <li><a href="https://www.facebook.com/"><i class="fi-social-facebook"></i></a></li>
               <li><a href="https://twitter.com/"><i class="fi-social-twitter"></i></a></li>
               <li><a href="https://instagram.com/"><i class="fi-social-instagram"></i></a></li>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
+
     
