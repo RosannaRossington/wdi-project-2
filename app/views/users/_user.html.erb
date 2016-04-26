@@ -12,22 +12,8 @@
         <img id="user_image" class="media-object" src="/images/default.jpg" alt="<%= user.username %>">
         <% end %>
           <div class="profile-info">
-            <h4 class="subheader"><%= user.first_name %></h4>
-            <h4 class="subheader"><%= user.last_name %></h4>
-            <p><%= user.email %></p>
-
             <h2 class="username hidden"><%= user.username %></h2>           
-            
-            <p>
-               <b>Image:</b>
-               <%= image_tag user.profile_image.url %>
-             </p>
-           <!--  <p><a href="http://foundation.zurb.com/forum">Forum</a> | <a href="http://zurb.com/ink/">Website</a></p> -->
-            <ul class="inline-list">
-              <li><a href="https://www.facebook.com/"><i class="fi-social-facebook"></i></a></li>
-              <li><a href="https://twitter.com/"><i class="fi-social-twitter"></i></a></li>
-              <li><a href="https://instagram.com/"><i class="fi-social-instagram"></i></a></li>
-            </ul>
+            <%= image_tag user.profile_image.url %>
           </div>
         </div>
       </div>

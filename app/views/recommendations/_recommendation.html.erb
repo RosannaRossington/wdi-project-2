@@ -4,6 +4,7 @@
      <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
      <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
     <% else %>
+
   <!--   <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
       <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>
     </a> -->
@@ -11,15 +12,19 @@
         <div class="medium-4 columns">
           <div class="item-wrapper">
             <div class="img-wrapper">
-              <a href="<%= recommendation.product_url %>"><img src=("/products/output-#{@recommendation.id}.png")></a>
-            <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
+         
+            <div id="thumbnail"><%= image_tag image_path("/products/output-#{recommendation.id}.png") %></div>
+           <!--  <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
+              <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>
+            </a> -->
 
-            <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
-
-           
           </div>  
+          <button><%= link_to "Recommendation",recommendation_path(recommendation.id) %></button>
+          <button><%= link_to "Comment", new_recommendation_comment_path(recommendation) %></button>
         </div>
       </div>
+
+
     <% end %>
   </div>
 

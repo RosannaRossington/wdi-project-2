@@ -3,3 +3,6 @@
 <li><%= link_to "Edit Profile", edit_user_registration_path %></li> 
 <%= render @user %>
 
+<h4 class="subheader"><%= @user.first_name %></h4>
+<h4 class="subheader"><%= @user.last_name %></h4>
+<p><%= @user.email %></p>
