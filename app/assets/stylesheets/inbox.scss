@@ -1,22 +1,16 @@
 $primary-color: #008cba;
 
-#thumbnail {
-  width:250px;
-  height:250px;
 
-  background-size:cover;
-
-}
 
 .item-wrapper {
   padding: 20px;
   border: 2px solid #efefef;
   border-radius: 7px;
   margin-top: 40px;
-  
+
   &:hover {
     .img-wrapper {
-      img { -webkit-filter: grayscale(0); } 
+      #thumbnail { -webkit-filter: grayscale(0); } 
     }
   }
 
@@ -55,7 +49,10 @@ $primary-color: #008cba;
   overflow: hidden;
 
 
-  img {
+  #thumbnail {
+    width:250px;
+    height:250px;
+    background-size:cover;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     -webkit-filter: grayscale(1);
