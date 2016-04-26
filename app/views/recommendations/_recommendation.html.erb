@@ -13,7 +13,9 @@
           <div class="item-wrapper">
             <div class="img-wrapper">
          
-            <div id="thumbnail"><%= image_tag image_path("/products/output-#{recommendation.id}.png") %></div>
+            <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
+            
+            </div>
            <!--  <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
               <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>
             </a> -->
