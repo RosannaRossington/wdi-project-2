@@ -2,6 +2,7 @@
   <div>
      <% if current_page?(action: "outbox")%>
      <p><%= link_to "Recommendation",recommendation_path(recommendation.id) %></p>
+     <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
     <% else %>
   <!--   <a class="th" role="button" aria-label="Thumbnail" href="<%= recommendation.product_url %>">
       <img aria-hidden=true src="/products/output-#{@recommendation.id}.png"/>

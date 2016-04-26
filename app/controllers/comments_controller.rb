@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   def new
       @recommendation = Recommendation.find(params[:recommendation_id])
       @comment = Comment.new
+      
   end
 
   def create

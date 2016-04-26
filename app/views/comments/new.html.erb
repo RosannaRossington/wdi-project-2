@@ -1,10 +1,5 @@
 <h1>Comment</h1>
 
-
-<h3>This rec was from: <%= @recommendation.sender_id %></h3>
-<h3>This rec is for: <%= @recommendation.receiver_id %></h3>
-
-
 <%= form_for [@recommendation, @comment] do |f| %>
   <% if @comment.errors.any? %>
     <% for message in @comment.errors.full_messages %>

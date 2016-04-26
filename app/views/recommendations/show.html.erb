@@ -1,9 +1,10 @@
 <h1>Recommendations#show</h1>
  <%= image_tag image_path("/products/output-#{@recommendation.id}.png") %>  
 <p>Message <%= @recommendation.message %> </p>
-<p>From <%= @sender.username %> </p>
+<p>Recommendation from <%= @sender.username %> </p>
+
 <% @recommendation.comments.each do |comment| %>
-<p>From: <%= @sender.username %></p>
+  <p>Comment from: <%= comment.user_id %></p>
   <p><%= comment.comment %></p>
   <p><%= image_tag comment.style_image.url %></p>
 <% end %>
