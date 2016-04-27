@@ -1,40 +1,39 @@
 @import "variables";
 
-h1,h5 {
+h5,h6 {
       text-transform: uppercase;
       font: bolder 0.875rem "Avenir Next";
       letter-spacing: 3px;
       color: #666;
       font-size: 70%;
       line-height: 2rem;
+      text-align: center;
 }
 
 .header.panel p {
     font-size: 20px;
     padding-top: 20px;
     text-align: center;
+    font-family:$nav-font-family;
 }
 
 
 .profile {
-  background-color: $form-background-color;
-  height: 10px;
 
-  h1, h5 {
-    text-align: center;
+  h1 {
+      font-family: $nav-font-family;
   }
 
-  #line-break {
-    background-color: $form-background-color;
-    height: 10px;
-  }
-
-  img {
-    height: 300px;
+  hr {
+     display: block;
+     height: 2px;
+     border: 0;
+     border-top: 1px solid #f0f;
+     padding: 0px;
   }
 
   .spacer {
-    height: 10px;
+    margin-bottom: 10px;
   }
 
   h5 > a {
