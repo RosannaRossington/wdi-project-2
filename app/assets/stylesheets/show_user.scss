@@ -1,5 +1,30 @@
+@import "variables";
 
-div {
+.header.panel p {
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.profile {
+  background-color: $form-background-color;
+  height: 10px;
+  // border: $border;
+
+  #line-break {
+    background-color: $form-background-color;
+    height: 10px;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  .spacer {
+    height: 10px;
+  }
+
   h5 > a {
     position: relative;
     color: #000;
