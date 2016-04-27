@@ -1,6 +1,5 @@
 @import "variables";
-
-   
+  
 #welcome {
 
   background-color: none;
@@ -8,7 +7,6 @@
     font-family:$home-font-family;
   }
 }
-
 
 #recommendation {
   width: 100%;
@@ -48,6 +46,17 @@ body {
 
 }
 
+//For Edit page
+.header.panel {
+  #edit {
+    color:$sign-link-color;
+    font-size: 16px;
+    text-align: center;
+    font-family:"Avenir Next";
+    font-weight: lighter;
+    padding-top: 15px;
+  }
+}
 
 
 

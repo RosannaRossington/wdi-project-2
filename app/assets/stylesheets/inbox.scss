@@ -1,6 +1,15 @@
+@import "variables";
 $primary-color: #008cba;
 
-
+.header.panel {
+  h3 {
+    color:$sign-link-color;
+    font-size: 16px;
+    text-align: center;
+    font-family:"Avenir Next";
+    font-weight: lighter;
+  }
+}
 
 .item-wrapper {
   padding: 20px;
@@ -12,6 +21,16 @@ $primary-color: #008cba;
     .img-wrapper {
       #thumbnail { -webkit-filter: grayscale(0); } 
     }
+  }
+
+  h5{
+    text-transform: uppercase;
+    font: bolder 0.875rem "Avenir Next";
+    letter-spacing: 3px;
+    color: $sign-link-color;
+    font-size: 70%;
+    line-height: 2rem;
+    text-align: center;
   }
 
   h5 > a {
@@ -56,15 +75,10 @@ $primary-color: #008cba;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     -webkit-filter: grayscale(1);
+    margin: 5px;
   }
 
 }  
 
-h3 { font-size: 22px; }
 
 
-p {
-  color: #888;
-  font-size: 13px;
-  margin-bottom: 0;
-}

@@ -12,6 +12,13 @@
 
   h1 {
     font-family: $nav-font-family;
+    font-size: 55px;
+  }
+
+  h3 {
+    font-family: $nav-font-family;
+    font-size: 14px;
+    color: #666;
   }
 
 
@@ -25,16 +32,6 @@
     text-align: center;
   }
 
-  h4 {
-    text-transform: uppercase;
-    font: bolder 0.875rem "Avenir Next";
-    letter-spacing: 3px;
-    color: #666;
-    font-size: 70%;
-    line-height: 2rem;
-    text-align: left;
-  }
-
   hr {
     display: block;
     height: 2px;
@@ -45,33 +42,6 @@
 
   .spacer {
     margin-bottom: 10px;
-  }
-
-  h4 > a {
-    position: relative;
-    color: #000;
-    text-decoration: none;
-  }
-
-  h4 > a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
-  &:hover h4 > a:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
   }
 
   h5 > a {
