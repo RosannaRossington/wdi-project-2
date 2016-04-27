@@ -23,11 +23,15 @@
 
   <div class="row spacer">
     <div class="medium-8 columns"><h1><%= @user.first_name %> <%= @user.last_name %></h1> </br>Registered email: <%= @user.email %></div>
-    <div class="medium-4 columns"><%= image_tag @user.profile_image.url %> </div>
+    <% if @user.profile_image? %>
+    <div class="medium-4 columns"><%= image_tag @user.profile_image.url %> alt="<%= @user.username %>"></div>
+    <% else %>
+    <div class="medium-4 columns">  <%= image_tag image_path("/images/default.jpg") %> </div>
+    <% end %>
   </div>
 
   <div class="row spacer" >
-    <div class="medium-12 columns"><%= link_to "Edit Profile", edit_user_registration_path %></div>
+    <div class="medium-12 columns"><h4 ><%= link_to "Edit Profile", edit_user_registration_path %></h4></div>
   </div>
 
   </div>
