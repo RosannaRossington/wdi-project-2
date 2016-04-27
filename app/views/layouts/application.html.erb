@@ -15,8 +15,12 @@
 
   <body>
     <% if current_page?(root_path) %>
+    
+    <% elsif current_page?(user_path(current_user.id)) %>
+      <%= render "inbox_header" %>
+
     <% else %>
-        <%= render "header" %>
+      <%= render "header" %>
     <% end %>
 
     <%= render "flash_message" %>
