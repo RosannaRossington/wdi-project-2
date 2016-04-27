@@ -1,10 +1,18 @@
 @import "variables";
 
-.intro-text {
-  font-family:$username-font-family;
-  font-size: 50px;
-  color: $pink;
-  text-align: center;
-  margin-top: 15%;
+.landing-page{ 
+
 }
 
+
+  .fa fa-arrows-h
+   {
+    color: $pink;
+   }
+  .brand {
+    font-family:$username-font-family;
+    font-size: 50px;
+    color: $navy;
+    text-align: center;
+    margin-top: 15%;
+  }

@@ -8,8 +8,9 @@
   transform: translateY(-50%);
 }
 
+
 .hero {
-  background: url('') no-repeat center center;
+  // background: url('http://static.pexels.com/wp-content/uploads/2014/07/beach-coast-holiday-2190-825x550.jpg') no-repeat center center;
   background-color: $body-background-color;
   background-size: cover;
   height: 50vh;
@@ -17,7 +18,11 @@
   h1 {
     color: #fff;
     text-align: center;
-    font-family:$home-font-family;
     @include vertical-align;
+    font-family:$nav-font-family;
   }
 }
+
+
+
+
