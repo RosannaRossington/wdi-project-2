@@ -33,4 +33,9 @@
     <%= render "flash_message" %>
     <%= yield %>
   </body>
+  <% if current_page?(root_path) %>
+    <% "" %>
+    <% else %>
+    <%= render "footer" %>
+  <% end %>
 </html>

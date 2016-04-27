@@ -1,0 +1,15 @@
+@import "variables";
+
+.footer {
+  background-color: $pink;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+  p {
+    &.copywrite {
+      color: black;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+}
