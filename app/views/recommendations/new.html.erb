@@ -5,7 +5,6 @@
       <div class="sign">
         <h1>New Recommendation</h1>
       </div>
-      <p><span></span> 
       <%= form_for [@recommendation] do |f| %>
         <% if @recommendation.errors.any? %>
           <% for message in @recommendation.errors.full_messages %>
@@ -29,9 +28,13 @@
         </fieldset>
         <%= f.submit class: "btn btn-primary button secondary"%>
       <% end %>
-      </p>
     </div>
-  
   </div>
 </div>
 
+<div class="loader-overlay">
+  <div class="loader">
+    <p class="loading-text">Creating recommendation...</p>
+    <div class="sk-rotating-plane"></div>
+  </div>
+</div>
