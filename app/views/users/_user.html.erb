@@ -7,13 +7,13 @@
       <div id="users">
         <div class="profile-card">
         <% if user.image? %>
-        <img id="user_image" class="media-object" src="<%= user.image %>" alt="<%= user.username %>">
+        <img id="user_image" class="media-object" src=" <%= user.profile_image.url %>" alt="<%= user.username %>">
         <% else %>
         <img id="user_image" class="media-object" src="/images/default.jpg" alt="<%= user.username %>">
         <% end %>
           <div class="profile-info">
             <h2 class="username hidden"><%= user.username %></h2>           
-            <%= image_tag user.profile_image.url %>
+            <%= user.profile_image.url %>
           </div>
         </div>
       </div>

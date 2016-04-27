@@ -14,14 +14,21 @@
   </head>
 
   <body>
-    <% if current_page?(root_path) %>
-    
-    <% elsif current_page?(user_path(current_user.id)) %>
-      <%= render "inbox_header" %>
+ <% if current_page?(root_path) %>
+   <% "" %>
 
-    <% else %>
-      <%= render "header" %>
-    <% end %>
+   <% elsif user_signed_in? %>
+   <% if current_page?(root_path) %>
+     <% "" %>
+     <% elsif current_page?(user_path(current_user.id)) %>
+       <%= render 'inbox_header' %>
+         <% else %>
+           <%= render 'header' %>
+     <% end %>
+
+ <% else %>
+   <%= render 'header' %>
+ <% end %>
 
     <%= render "flash_message" %>
     <%= yield %>

@@ -13,7 +13,8 @@
 
 <div class="row">
   <div class="medium-8 columns">Email: <%= @user.email %></div>
-  <div class="medium-4 columns"><%= @user.image %></div>
+  <div class="medium-4 columns"><%= image_tag @user.profile_image.url %> </div>
+  
 </div>
 
 <div class="row">
@@ -22,8 +23,10 @@
 
 
 <div class="row">
-  <div class="medium-11 medium-centered columns"><h5><%= link_to "Edit Profile", edit_user_registration_path %></h5></div>
+  <div class="medium-4 columns"><h5><%= link_to "Edit Profile", edit_user_registration_path %></h5></div>
+  <div class="medium-4 columns"><h4><%= link_to "Inbox", inbox_path %></h4></div>
+  <div class="medium-4 columns"><h4><%= link_to "Outbox", outbox_path %></h4> </div>
+  
 </div>
- <li><%= link_to "Inbox", inbox_path %></li>
- <li><%= link_to "Outbox", outbox_path %></li> 
+
 </container>
