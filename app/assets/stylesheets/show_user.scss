@@ -1,5 +1,14 @@
 @import "variables";
 
+h1,h5 {
+      text-transform: uppercase;
+      font: bolder 0.875rem "Avenir Next";
+      letter-spacing: 3px;
+      color: #666;
+      font-size: 70%;
+      line-height: 2rem;
+}
+
 .header.panel p {
     font-size: 20px;
     padding-top: 20px;
@@ -10,7 +19,10 @@
 .profile {
   background-color: $form-background-color;
   height: 10px;
-  // border: $border;
+
+  h1, h5 {
+    text-align: center;
+  }
 
   #line-break {
     background-color: $form-background-color;

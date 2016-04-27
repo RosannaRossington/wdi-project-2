@@ -12,6 +12,11 @@
 <div class="profile">
 
   <div class="row spacer">
+    <div class="medium-4 columns"><h5><%= link_to "Inbox", inbox_path %></h5></div>
+    <div class="medium-4 columns"><h5><%= link_to "Outbox", outbox_path %></h5> </div> 
+  <div class="medium-4 columns"><h5><%= link_to "Edit Profile", edit_user_registration_path %></h5></div>
+  
+  <div class="row spacer">
     <div class= "medium-12 columns "><h1><%= @user.first_name %> <%= @user.last_name %></h1></div>
   </div>
 
@@ -25,13 +30,6 @@
     <div class= "medium-12 columns "></div>
   </div>
 
-  <div class="row spacer">
-    <div class="medium-12 columns"><h4><%= link_to "Inbox", inbox_path %></h4></div>
-    <div class="medium-12 columns"><h4><%= link_to "Outbox", outbox_path %></h4> </div> 
-  </div>
-
-  <div class="row spacer">
-  <div class="medium-12 columns"><h5><%= link_to "Edit Profile", edit_user_registration_path %></h5></div>
   </div>
 
 </div>
