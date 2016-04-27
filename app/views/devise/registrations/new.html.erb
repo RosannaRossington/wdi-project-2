@@ -1,51 +1,76 @@
-<h2>Sign up</h2>
+<div class="row spacer">
+  <div class="small-8 medium-6 large-5 small-centered columns">
+    <div class="header panel">
+      <div class="sign">
+        <h1>Welcome</h1>
+          <h3 id="edit">Register</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 
+<div id="form">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="row spacer" >
+    <div class="medium-12 columns"><hr></div>
   </div>
 
-  <div class="field">
-    <%= f.label :profile_image %><br />
-    <%= f.file_field :profile_image, autofocus: true %>
+  <div class="row">
+    <div class="field medium-6 columns">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, autofocus: true %>
+    </div>
+    <div class="field medium-6 columns">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, autofocus: true %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+  <div class="row">
+    <div class="field medium-12 columns">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+  <div class="row">
+    <div class="field medium-6 columns">
+      <%= f.label :username %>
+      <%= f.text_field :username, autofocus: true %>
+    </div>
+     <div class="field medium-6 columns">
+      <%= f.label :profile_image %>
+      <%= f.file_field :profile_image, autofocus: true %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true %>
+  <div class="row">
+    <div class="field medium-6 columns">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off", :placeholder => "#{@minimum_password_length} characters minimum"%>
+    </div>
+    <div class="field medium-6 columns">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  
+  <div class="row">
+      <div class="actions medium-2 columns">
+        <h5><%= f.submit "Sign up" %></h5>
+      </div>
+    <div class="actions medium-2 columns">
+     <h5><%= render "devise/shared/links" %></h5>
+     </div>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+  <div class="row spacer" >
+    <div class="medium-12 columns"><hr></div>
+  </div>
+</div>
 
 
