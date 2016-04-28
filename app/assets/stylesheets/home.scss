@@ -1,30 +1,26 @@
 @import "variables";
 
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 
 .home {
-  padding: 10px;
-  // background: url('http://static.pexels.com/wp-content/uploads/2014/07/beach-coast-holiday-2190-825x550.jpg') no-repeat center center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // padding: 20px;
+  z-index: 1;
   background-color: $body-background-color;
-  background-size: cover;
-  height: 50vh;
-  overflow: hidden;
+
+  em {
+    color: $brand-colour;
+  }
   h1 {
     color: $brand-colour;
     text-align: center;
-    @include vertical-align;
     font-family:$nav-font-family;
   }
   h2 {
     font-size: 2rem;
-    color: $brand-colour;
+    color: $navy;
     font-family:$nav-font-family;
   }
 }

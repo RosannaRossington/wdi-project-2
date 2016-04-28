@@ -34,16 +34,6 @@
   <p> <%= @recommendation.message %></p> 
 </div>
 
-
-<!-- <container>
-<% @recommendation.comments.each do |comment| %>
-  <p>Comment from: <%= comment.user.username %></p>
-  <p><%= comment.comment %></p>
-  <p><%= image_tag comment.style_image.url %></p>
-<% end %>
-</container> -->
-
-
 <section class="benefits">
   <% @recommendation.comments.each do |comment| %>
   <div class="row">
@@ -52,9 +42,10 @@
       <div id="message">
         <div class="medium-6 medium-centered columns">
         <h5> From: <%= comment.user.username %> &#x270D; </h5>
+        </div>
         <hr>
         <p><%= comment.comment %></p>
-        <p><%= image_tag comment.style_image.url %></p>
+        <p id= "style-shot"><%= image_tag comment.style_image.url %></p>
       </div>
     </div>
   </div>
