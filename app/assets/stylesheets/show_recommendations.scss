@@ -3,14 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
 
-#message{
-  border: none;
-  background-color: $body-background-color;
-  #style-shot {
-    
-  }
-
-}
 
   hr {
     display: block;
@@ -58,21 +50,14 @@
   }
 }
 
-.benefits{
-    
-#message {
-  border: 2px solid #444;
-  background-color: #fff;
+
+
+.benefits #message {
+  border: none;
+  background-color: $body-background-color;
   margin:  0;
-  padding: 10px;
-}
-hr{
-    width: 70%;
-    border: 1px solid #444;
-  }
-  h5{
-    font-weight: 300;
-  }
+  padding: 0px;
+
   p{
     color: #666;
     font-weight: 300;
@@ -85,4 +70,6 @@ hr{
     font-size: 40px;
     color: #ccc;
   }
+
 }
+
