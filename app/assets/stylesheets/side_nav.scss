@@ -1,5 +1,9 @@
 @import "variables";
 
+aside.left-off-canvas-menu {
+  color: $hover-color;
+}
+
 .inner-wrap {
   width: auto;
 }
@@ -62,7 +66,9 @@
 }
 
 nav {
-  background-color: $nav-background-color;
+  div {
+  display:block;
+  }
   ul {
     margin: 0;
     padding: 0;

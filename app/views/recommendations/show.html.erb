@@ -1,7 +1,39 @@
-<h1>Recommendations#show</h1>
-<%= image_tag image_path("/products/output-#{@recommendation.id}.png") %> 
-<p>Message <%= @recommendation.message %> </p>
-<p>Recommendation from <%= @sender.username %> </p>
+<div class="row spacer">
+  <div class="small-8 medium-6 large-5 small-centered columns">
+    <div class="header panel">
+      <div class="sign">
+      <h1>Recommendation</h1>
+      <h3 id="rec-show">From <%= @sender.username %> </h3> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row spacer" id="shop-button">
+  <div class="medium-6 medium-centered columns">
+    <h5><%=link_to "Shop", @recommendation.product_url, target: '_blank'%></h5>
+  </div>
+</div>
+
+<section id="screenshot">
+  <div class="row spacer" >
+    <div class="medium-12 columns"><hr> </div>
+  </div>
+
+  <div class="medium-6 medium-centered columns">
+  <%= image_tag image_path("/products/output-#{@recommendation.id}.png") %> 
+  </div>
+
+  <div class="row spacer" >
+    <div class="medium-12 columns"><hr> </div>
+  </div>
+</section>
+
+<div class="medium-6 medium-centered columns">
+  <p><i class="fa fa-envelope-o" aria-hidden="true"></i></p>
+  <p> <%= @recommendation.message %></p> 
+</div>
+
 
 <!-- <container>
 <% @recommendation.comments.each do |comment| %>
@@ -11,9 +43,6 @@
 <% end %>
 </container> -->
 
-<h3><%=link_to "Shop", @recommendation.product_url, target: '_blank'%></h3>
-
-
 
 <section class="benefits">
   <% @recommendation.comments.each do |comment| %>
@@ -21,10 +50,11 @@
     <div class="small-12 large-4 columns benefit">
       <i class="fa fa-envelope-o"></i>
       <div id="message">
-      <h5> From: <%= comment.user.username %> &#x270D; </h5>
-      <hr>
-      <p><%= comment.comment %></p>
-      <p><%= image_tag comment.style_image.url %></p>
+        <div class="medium-6 medium-centered columns">
+        <h5> From: <%= comment.user.username %> &#x270D; </h5>
+        <hr>
+        <p><%= comment.comment %></p>
+        <p><%= image_tag comment.style_image.url %></p>
       </div>
     </div>
   </div>

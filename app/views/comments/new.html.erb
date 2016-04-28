@@ -1,6 +1,17 @@
-<h1>Comment</h1>
+<div class="row spacer">
+  <div class="small-8 medium-6 large-5 small-centered columns">
+    <div class="header panel">
+      <div class="sign">
+        <h1>Comment & thank</h1>
+          <h3 > add a photograph your new outfit</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 
+<div id="form">
 <%= form_for [@recommendation, @comment] do |f| %>
+
   <% if @comment.errors.any? %>
     <% for message in @comment.errors.full_messages %>
       <div class="alert alert-danger" role="alert">
@@ -9,15 +20,22 @@
     <% end %>
   <% end %>
 
-  <fieldset class="form-group">
+  <div class="row">
+    <div class="field medium-6 medium-centered columns">
     <%= f.label :comment %>
     <%= f.text_area :comment, class: "form-control" %>
-  </fieldset>
-  
-  <div class="field">
-    <%= f.label :style_image %><br />
-    <%= f.file_field :style_image %>
+    </div>
+    <div class="field medium-6 medium-centered columns">
+  <%= f.label :style_image %>
+  <%= f.file_field :style_image %>
+    </div>
   </div>
 
-  <%= f.submit class: "btn btn-primary" %>
+  <div class="row">
+  <div class="field medium-6 medium-centered columns">
+  <%= f.submit :class => 'btn btn-primary button' %>
+  </div>
+  </div>
 <% end %>
+
+</div>

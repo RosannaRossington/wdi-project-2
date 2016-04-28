@@ -1,6 +1,23 @@
 @import "variables";
 
+
+
 #form {
+  .button:focus {
+    outline:0;
+  }
+  .button {
+    background-color: $body-background-color;
+    font: bolder 0.875rem "Avenir Next";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #000;
+    font-size: 70%;
+    line-height: 2rem;
+    text-align: center;
+
+
+  }
 
   hr {
     display: block;

@@ -7,7 +7,7 @@
           <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
           </div>     
           <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
-          <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+          <h5><%= link_to "Comment", new_recommendation_comment_path(recommendation) %></h5>
         </div>
       </div> 
     </div>
@@ -19,7 +19,7 @@
             <div id="thumbnail" style = "background-image: url('<%= image_path("/products/output-#{recommendation.id}.png") %>')">
             </div>
             <h5><%= link_to "Recommendation",recommendation_path(recommendation.id) %></h5>
-            <%= link_to "Comment", new_recommendation_comment_path(recommendation) %>
+            <h5><%= link_to "Comment", new_recommendation_comment_path(recommendation) %></h5>
           </div>
         </div> 
       </div>
