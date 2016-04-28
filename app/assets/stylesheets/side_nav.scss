@@ -60,3 +60,48 @@
 .icon-bar > * i {
     color: #FFFFFF;
 }
+
+nav {
+  background-color: $nav-background-color;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+  }
+
+  li { 
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-family: $nav-font-family;
+  }
+
+  li > a {
+      position: relative;
+      color: $font-color;
+      text-decoration: none;
+    }
+
+    li > a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $font-color;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    &:hover li > a:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+
+}
