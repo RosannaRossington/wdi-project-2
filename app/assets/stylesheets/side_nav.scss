@@ -32,6 +32,15 @@ aside.left-off-canvas-menu {
   position: fixed;
   width: 0;  
   height: 100%;
+  background: $nav-background-color;
+
+  .icon-bar {
+    background: $nav-background-color;
+  }
+
+  .item {
+    background: $nav-background-color;
+  }
 }
 
 .move-right .left-off-canvas-menu {
@@ -65,7 +74,7 @@ aside.left-off-canvas-menu {
 }
 
 .icon-bar > * i {
-    color: #FFFFFF;
+    color: $brand-colour;
 }
 
 nav {
@@ -87,7 +96,7 @@ nav {
   }
 
   a {
-     color: $font-color;
+     color: #252044; //$font-color;
   }
 
   a:hover {

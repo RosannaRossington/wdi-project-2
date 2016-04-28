@@ -1,7 +1,10 @@
-
-<% flash.each do |name, message| %>   
-  <div class="flash-message flash-message-<%= name %>">     
-  <%= message %>   
-  </div> 
-<% end %>
+<div class="flash">
+  <div class="pre-flash">
+    <% flash.each do |name, message| %>   
+      <div class="flash-message flash-message-<%= name %>">     
+      <%= message %>   
+      </div> 
+    <% end %>
+  </div>
+</div>
 

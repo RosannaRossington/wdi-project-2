@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-    <link href='https://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-  <body>
+  <title><%= content_for?(:title) ? yield(:title) : "Mudita" %></title>
+  <link href='https://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
  <% if current_page?(root_path) %>
-   <% "" %>
-
-   <% elsif user_signed_in? %>
-   <% if current_page?(root_path) %>
-     <% "" %>
-     <% elsif current_page?(user_path(current_user.id)) %>
-       <%= render 'profile_header' %>
-         <% else %>
-           <%= render 'header' %>
-     <% end %>
-
- <% else %>
-   <%= render 'header' %>
- <% end %>
-
-    <%= render "flash_message" %>
-    <%= yield %>
- 
+  <% "" %>
+ <% elsif user_signed_in? %>
   <% if current_page?(root_path) %>
     <% "" %>
-    <% else %>
-    <%= render "footer" %>
+  <% elsif current_page?(user_path(current_user.id)) %>
+    <%= render 'profile_header' %>
+  <% else %>
+    <%= render 'header' %>
   <% end %>
-  </body>
+
+ <% else %>
+  <%= render 'header' %>
+ <% end %>
+
+ <%= render "flash_message" %>
+ <%= yield %>
+ 
+</body>
 </html>
