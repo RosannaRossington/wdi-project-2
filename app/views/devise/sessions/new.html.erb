@@ -16,18 +16,18 @@
   </div>
 
   <div class="row">
-    <div class="field medium-12 columns">
+    <div class="field medium-6 columns">
       <%= f.label :email %>
       <%= f.email_field :email, autofocus: true %>
     </div>
-  </div>
-
-  <div class="row">
     <div class="field medium-6 columns">
       <%= f.label :password %>
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
-    <div class="actions medium-6 columns">
+  </div>
+
+  <div class="row">
+    <div class="actions medium-12 columns">
       <h5><%= f.submit "Log in" %></h5>
     </div>
   </div>
