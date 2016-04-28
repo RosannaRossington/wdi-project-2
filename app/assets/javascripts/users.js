@@ -1,6 +1,6 @@
 
 $(function(){ $(document).foundation(); 
-var colors = ["blue", "pink", "green"]
+var colors = ["MediumVioletRed", "Cornsilk", "DarkSeaGreen", "Lavender", "RosyBrown"]
 var color = colors[Math.floor(Math.random()*colors.length)]
 
   $('.profile-card').hover(function(){

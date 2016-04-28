@@ -77,6 +77,14 @@ nav {
     font-family: $nav-font-family;
   }
 
+  a {
+     color: $font-color;
+  }
+
+  a:hover {
+    color: $hover-color;
+  }
+
   li > a {
       position: relative;
       color: $font-color;
