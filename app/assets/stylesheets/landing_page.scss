@@ -1,17 +1,17 @@
 @import "variables";
 
-
-.fa fa-arrows-h
+.fa-angle-double-right 
  {
-  color: $pink;
+  font: $logo-font;
  }
-#logo {
 
+#logo {
   font-family:$logo-font-family;
   font-size: 50px;
-  color: $navy;
   text-align: center;
-  margin-top: 15%;
+  a{
+    color: $navy;
+  }
 }
 
 .service {
