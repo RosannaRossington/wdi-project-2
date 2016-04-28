@@ -3,7 +3,7 @@
 
     <div class="header panel">
       <div class="sign">
-        <h1>New Recommendation</h1>
+        <h1 id="new-rec">New Recommendation</h1>
       </div>
       <%= form_for [@recommendation] do |f| %>
         <% if @recommendation.errors.any? %>

@@ -1,7 +1,10 @@
 @import "variables";
 
 #logo-nav {
+  a{
   font-family: $logo-font-family;
+  color:$brand-colour;
+  }
 }
 aside.left-off-canvas-menu {
   color: $hover-color;
@@ -74,7 +77,7 @@ aside.left-off-canvas-menu {
 }
 
 .icon-bar > * i {
-    color: $brand-colour;
+    color: $navy;
 }
 
 nav {
