@@ -5,26 +5,26 @@ class RecommendationsController < ApplicationController
   def new
     @recommendation = Recommendation.new
   end
- 
+
   def show
     @recommendation = Recommendation.find(params[:id])
     @sender = User.find(@recommendation.sender_id)
 
   end
-  # Set up a controller action for this rec form, so that an rec can be created and assigned to a sender, a receiver and a product url correctly. 
- 
+  # Set up a controller action for this rec form, so that an rec can be created and assigned to a sender, a receiver and a product url correctly.
+
   def create
 
       @recommendation = Recommendation.new(recommendation_params)
       @recommendation.sender_id = current_user.id
       @recommendation.receiver_id = User.find_by_username(params[:receiver_username]).id
-    
+
 
       if @recommendation.save
-          flash[:success] = "Your rec was made successfully"
+          flash[:success] = "Your recommendation was made successfully"
           redirect_to home_path
       else
-          flash[:danger] = "Your rec was not sent"
+          flash[:danger] = "Your recommendation was not sent"
           redirect_to home_path
       end
   end
