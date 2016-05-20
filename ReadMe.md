@@ -2,7 +2,7 @@
 
 ### _"When we can be happy of the joys that other beings feel it is called Mudita"_
 
-[Mudita](https://infinite-falls-99467.herokuapp.com/)<p>
+[Mudita](https://the-mudita.herokuapp.com/)<p>
 ![alt text](./MuditaHome.png)
 ###Introduction
 A website that brings a social aspect to shopping online. Allowing you to share links to products you think would suit a friend. <p> Mudia is the "I saw this and thought of you.." moments stored in one place. <p>
